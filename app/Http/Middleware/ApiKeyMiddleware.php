@@ -13,7 +13,7 @@ class ApiKeyMiddleware
     public function handle($request, Closure $next)
     {
         if(!$key = $request->post('apikey') or $key !== config('app.api_key')) {
-            throw new AuthenticationException('Wrong API key provided');
+            return response()->json(['error' => 'Unauthenticated.'], 401);
         }
 
         return $next($request);
