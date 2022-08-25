@@ -26,7 +26,7 @@ Run `composer install` to install the composer dependencies
 
 Copy the example config file with the following command: `cp .env.example .env`
 
-Open your **.env** file and set the database name, user to the desired values.
+Open your **.env** file and set the **DB_DATABASE**, **DB_USERNAME** and **DB_PASSWORD** to the desired values.
 
 Run `php artisan key:generate` to generate appliaction key
 
@@ -34,3 +34,4 @@ Run `php artisan migrate:fresh --seed` to migrate the database and fill it up wi
 
 Run `php artisan serve` to serve the appliaction
 
+Done!
